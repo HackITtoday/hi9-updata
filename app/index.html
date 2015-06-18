@@ -51,6 +51,7 @@
 	  insertBefore(d,q)}(window,document,'script','_gs');
 
 	  _gs('GSN-963825-Q');
+		
 	</script>	
   <!-- end of gosquared coce  -->
 	
@@ -97,8 +98,6 @@
           <span class="flex"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
           <paper-button on-tap="{{login}}" hidden?="{{!statusKnown || user}}">Sign in</paper-button>
 
 <firebase-auth id="login" redirect login="{{login}}" autoLogin user="{{user}}" statusKnown="{{statusKnown}}" data="{{user}}" location="https://hi9site.firebaseio.com" provider="google"></firebase-auth>
@@ -140,7 +139,7 @@
             <section data-route="contact">
               <paper-material elevation="1">
                 <h2 class="paper-font-display2">Contact</h2>
-                <p>This is the contact section</p>
+                <p>Contact Details</p>
               </paper-material>
             </section>
 
