@@ -89,7 +89,9 @@
   (function() {
     Polymer({
       is: 'hi-9',
-      login: ""
+      login: function() {
+        this.$.login;
+      }
     });
   })();
   </script>
