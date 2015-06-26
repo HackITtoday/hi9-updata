@@ -108,22 +108,16 @@
               </a>
           </paper-menu>
       </div>
-      <paper-header-panel main mode="waterfall-tall">
+      <paper-header-panel main mode="waterfall">
 
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar">
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
           
 		  <!-- Application name -->
-          <div id="title">
-			<h1 flex="4">Hi9</h1>
-		  </div>
-		  
-          <!-- Application sub title -->
-          <h3 flex="4">Connecting the UnConnected</h3>
-		  
-		  <span class="4"></span>
-
+		  <h1>Hi9</h1>
+		  <h3>Connecting the UnConnected</h3>
+		  <span flex></span>
           <!-- Toolbar icons -->
           <hi9-login></hi9-login>
          
@@ -169,14 +163,14 @@
                  text="Caching complete! This app will work offline.">
     </paper-toast>
 
-    <platinum-sw-register auto-register
+<!--     <platinum-sw-register auto-register
                           clients-claim
                           skip-waiting
                           on-service-worker-installed="displayInstalledToast">
       <platinum-sw-cache default-cache-strategy="networkFirst"
                          precache-file="precache.json">
       </platinum-sw-cache>
-    </platinum-sw-register>
+    </platinum-sw-register> -->
 
   </template> 
   <!-- build:js scripts/app.js -->
