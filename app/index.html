@@ -90,11 +90,18 @@
 		  <span flex></span>
           <!-- Toolbar icons -->
          
-              <hi9-login show_model="{{showLogin}}" ></hi9-login>
+              <hi9-login login="{{login}}" show_model="{{showLogin}}" ></hi9-login>
         </paper-toolbar>
 
         <!-- Main Content -->
         <div class="content">
+          <template is="dom-if" if="{{showLogin}}">
+            <paper-dialog modal>
+              <p> This is your first time at HI9 please login to use the site.  </p>          <div class="buttons"> 
+                <paper-button on-tap="login" dialog-confirm >Login</paper-button>
+              </div>
+            </paper-dialog>
+          </template>
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
@@ -132,13 +139,7 @@
                  duration="6000"
                  text="Caching complete! This app will work offline.">
     </paper-toast>
-    <template is="dom-if" if="{{showLogin}}">
-      <paper-dialog modal>
-        <p> This is your first time at HI9 please login to use the site.  </p>          <div class="buttons"> 
-          <paper-button on-tap="login" dialog-confirm >Login</paper-button>
-        </div>
-      </paper-dialog>
-    </template>
+
 <!--     <platinum-sw-register auto-register
                           clients-claim
                           skip-waiting
