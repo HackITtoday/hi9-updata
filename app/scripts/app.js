@@ -24,6 +24,18 @@
   app.login = function() {       
     document.querySelectorAll('html hi9-login')[0].login();
   }
+
+  app.ready = function() {       
+    setTimeout( function() {
+      var dialog = document.getElementById("login-dialog");
+      var app = document.querySelector('#app');
+      if (dialog) {
+        if (app.showLogin) {
+          dialog.open();
+        }
+      }
+    },3000)
+  }
   // Close drawer after menu item is selected if drawerPanel is narrow
   app.onMenuSelect = function() {
     var drawerPanel = document.querySelector('#paperDrawerPanel');

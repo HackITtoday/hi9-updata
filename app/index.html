@@ -84,21 +84,21 @@
         <paper-toolbar id="mainToolbar">
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
           
-		  <!-- Application name -->
-		  <h1>Hi9</h1>
-		  <h3>Connecting the UnConnected</h3>
-		  <span flex><hi9-login show_model="{{showLogin}}" ></hi9-login></span>
+	  <!-- Application name -->
+	  <h1>Hi9</h1>
+	  <h3>Connecting the UnConnected</h3>
+	  <span flex><hi9-login show_model="{{showLogin}}" ></hi9-login></span>
         </paper-toolbar>
 
         <!-- Main Content -->
         <div class="content">
-          <template is="dom-if" if="{{showLogin}}">
-            <paper-dialog modal>
-              <p> This is your first time at HI9 please login to use the site.  </p>          <div class="buttons"> 
-                <paper-button on-tap="login" dialog-confirm >Login</paper-button>
-              </div>
-            </paper-dialog>
-          </template>
+          <paper-dialog id="login-dialog" remmodal remstyle="z-index:999998">
+          
+            <p> This is your first time at HI9 please login to use the site.  </p>
+            <div class="buttons"> 
+              <paper-button on-tap="login" dialog-confirm >Login</paper-button>
+            </div>
+          </paper-dialog>
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
@@ -111,7 +111,7 @@
             </section>
 
             <section data-route="privacy">
-				<privacy-page></privacy-page>
+              <privacy-page></privacy-page>
             </section>
 
             <section data-route="user-info">
@@ -137,14 +137,14 @@
                  text="Caching complete! This app will work offline.">
     </paper-toast>
 
-<!--     <platinum-sw-register auto-register
+    <platinum-sw-register auto-register
                           clients-claim
                           skip-waiting
                           on-service-worker-installed="displayInstalledToast">
       <platinum-sw-cache default-cache-strategy="networkFirst"
                          precache-file="precache.json">
       </platinum-sw-cache>
-    </platinum-sw-register> -->
+    </platinum-sw-register> 
 
   </template> 
   <!-- build:js scripts/app.js -->
