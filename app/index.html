@@ -91,7 +91,7 @@
 	  <!-- Application name -->
 	  <h1>Hi9</h1>
 	  <h3>Connecting the UnConnected</h3>
-          <span flex><hi9-login show_model="{{showLogin}}" user="{{user}}" ></hi9-login></span>
+          <span flex></span><hi9-login show_model="{{showLogin}}" user="{{user}}" ></hi9-login>
         </paper-toolbar>
 
         <!-- Main Content -->
@@ -132,7 +132,7 @@
             </section>
 
             <section data-route="user">
-              <user-page></user-page>
+              <user-page user={{user}}></user-page>
             </section>
 
           </iron-pages>

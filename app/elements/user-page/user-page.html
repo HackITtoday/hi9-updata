@@ -1,0 +1,28 @@
+<dom-module id="user-page">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+  <template>
+  <ul>
+    <template is="dom-if" if="{{user}}">
+    <li><span class="paper-font-body1">{{user}}</span></li>
+    </template>
+  </ul>
+  </template>
+  </dom-module>
+  <script>
+    (function () {
+      Polymer({
+        is: 'user-page',
+        properties: {
+          user: {
+            type: Object
+          }
+        },
+        ready: function() {
+        }
+      });
+    })();
+  </script>
