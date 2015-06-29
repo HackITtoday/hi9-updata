@@ -20,8 +20,13 @@
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
+    setTimeout(function() {       
+      document.querySelectorAll('html hi9-login')[0].$.login();
+    },6000)
   });
-
+  app.login = function() {       
+      document.querySelectorAll('html hi9-login')[0].$.login();
+  }
   // Close drawer after menu item is selected if drawerPanel is narrow
   app.onMenuSelect = function() {
     var drawerPanel = document.querySelector('#paperDrawerPanel');
@@ -29,6 +34,13 @@
       drawerPanel.closeDrawer();
     }
   };
+  
+  
+  
+  
+  
+  
+  
 
   //<!-- gosquared code  -->
   //	<script>
