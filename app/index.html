@@ -87,10 +87,7 @@
 		  <!-- Application name -->
 		  <h1>Hi9</h1>
 		  <h3>Connecting the UnConnected</h3>
-		  <span flex></span>
-          <!-- Toolbar icons -->
-         
-              <hi9-login login="{{login}}" show_model="{{showLogin}}" ></hi9-login>
+		  <span flex><hi9-login id=hi9 show_model="{{showLogin}}" ></hi9-login></span>
         </paper-toolbar>
 
         <!-- Main Content -->
@@ -98,7 +95,7 @@
           <template is="dom-if" if="{{showLogin}}">
             <paper-dialog modal>
               <p> This is your first time at HI9 please login to use the site.  </p>          <div class="buttons"> 
-                <paper-button on-tap="login" dialog-confirm >Login</paper-button>
+                <paper-button on-tap="hi9.$.login" dialog-confirm >Login</paper-button>
               </div>
             </paper-dialog>
           </template>
