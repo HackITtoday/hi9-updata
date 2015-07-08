@@ -44,13 +44,6 @@
     }
   };
   
-  
-  
-  
-  
-  
-  
-
   //<!-- gosquared code  -->
   //	<script>
 	  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
